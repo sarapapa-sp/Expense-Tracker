@@ -1,0 +1,56 @@
+.topfold{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+    margin: 6px 12px;
+    align-items: center;
+}
+
+.home-top-fold{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 5px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 4px 10px;
+}
+.search-bar input{
+    outline: none;
+    border: none;
+    width: 80%;
+}
+
+.add-button{
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    align-items: center;
+    border: 1px solid white;
+    padding:5px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-top-fold{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+.add-top-fold-button{
+    cursor: pointer;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+
+}
+
+.add-top-fold-button .icon{
+    display: flex;
+    align-items: center;
+}
