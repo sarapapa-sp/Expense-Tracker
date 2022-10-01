@@ -2,8 +2,11 @@ import "./addform.css";
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown} from "@fortawesome/free-solid-svg-icons";
+import {categorylist} from "../../Constants/addExpense";
 
 function AddForm(props) {
+    const categories =categorylist
+    const [openCategory , setOpenCategory] = useState(false)
     const [data,setData] = useState()
     const [title,setTitle] = useState("")
     const [amount,setAmount] =useState("")
@@ -23,6 +26,9 @@ function AddForm(props) {
         }
         setAmount(value)
         console.log(amount)
+    }
+    const handleCategoryOpen = () => {
+        setOpenCategory(!openCategory)
     }
     return (
         <div className="add-form">
@@ -49,12 +55,27 @@ function AddForm(props) {
 
             <div className="category-container">
                     <div className="category">
-                        <div className="">
+                        <div className="dropdown">
                             <label>Category</label>
                             <FontAwesomeIcon
                                 className="category-icon"
-                                icon={faChevronDown} />
+                                icon={faChevronDown}
+                                onClick={handleCategoryOpen}
+                            />
                         </div>
+                        {openCategory &&
+                            <div className="dropdown-container">
+
+                                {
+                                    categories.map(item => (
+                                        <div className="dropdown-item">
+                                            <label>{item.title}</label>
+                                            <img src={item.icon} alt={item.title} />
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        }
                     </div>
             </div>
 

@@ -1,4 +1,4 @@
-export const category = [
+export const categorylist = [
     {
         id:1,
         title:"Education",
