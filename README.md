@@ -7,10 +7,10 @@ To add entry
   json format-
     
     {
-      "title":"name",
-      "method":"UPI",
-      "price":"30",
-      "category":"data"
+      "title":"",
+      "method":"",
+      "price":"",
+      "category":""
     }
     
     
